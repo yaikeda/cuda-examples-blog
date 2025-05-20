@@ -1,6 +1,6 @@
 ---
 title: "Three CUDA Memory Allocation Methods and Zero-Copy Mapping"
-date: 2024-05-19T21:00:00+09:00
+date: 2025-05-19T21:00:00+09:00
 draft: false
 tags: ["CUDA", "Memory", "VRAM", "Pinned Memory", "Zero-Copy"]
 categories: ["Programming", "GPU", "Memory"]

@@ -1,6 +1,6 @@
 ---
 title: "Comparing CPU and GPU Performance in Vector Addition with CUDA"
-date: 2024-05-18T21:00:00+09:00
+date: 2025-05-18T21:00:00+09:00
 draft: false
 tags: ["CUDA", "GPU", "Benchmark", "C++", "nvcc"]
 categories: ["Programming", "GPU", "Optimization"]
