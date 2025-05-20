@@ -30,9 +30,8 @@ staticDir = "static"
     Title = "GPU Development Logs & CUDA Examples"
     Content = """
 👋 Welcome. I'm documenting key learnings and experiments from my ongoing work in GPU computing.
-- This site collects focused examples of CUDA implementations — from memory management and performance profiling to real-time rendering techniques and system-level optimization.    
-- 🛠️ Each post is backed by runnable code, shared openly on [GitHub](https://github.com/yaikeda/cuda-examples), and written to be useful for both learning and collaboration.
-- If you're exploring similar challenges or technologies, feel free to connect!
+🧩 This site collects focused examples of CUDA implementations — from memory management and performance profiling to real-time rendering techniques and system-level optimization.    
+🛠️ Each post is backed by runnable code, shared openly on [GitHub](https://github.com/yaikeda/cuda-examples), and written to be useful for both learning and collaboration.
 """
 
 [markup]
