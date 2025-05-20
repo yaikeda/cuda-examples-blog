@@ -20,16 +20,19 @@ staticDir = "static"
     name = "linkedin"
     url = "https://www.linkedin.com/in/yasunari-ikeda/"
 
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/yaikeda/cuda-examples"
+
   [params.homeInfoParams]
-    Title = "PaperMod's Demo"
-    Content = """👋 Welcome to demo page of Hugo's theme PaperMod!
+    Title = "GPU Development Logs & CUDA Examples"
+    Content = """👋 Welcome. I'm documenting key learnings and experiments from my ongoing work in GPU computing.
 
-    - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+    This site collects focused examples of CUDA implementations — from memory management and performance profiling to real-time rendering techniques and system-level optimization.
 
-    - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+    🛠️ Each post is backed by runnable code, shared openly on [GitHub](https://github.com/yaikeda/cuda-examples), and written to be useful for both learning and collaboration.
 
-    - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
-    """
+    If you're exploring similar challenges or technologies, feel free to connect."""
 
 [markup]
   [markup.highlight]
