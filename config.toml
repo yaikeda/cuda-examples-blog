@@ -15,6 +15,8 @@ staticDir = "static"
   ShowReadingTime = true
   ShowShareButtons = true
   ShareButtons = ["linkedin"]
+  fontFamily = "Inter"
+  googleFonts = "https://fonts.googleapis.com/css2?family=Inter&display=swap"
 
   [[params.socialIcons]]
     name = "linkedin"
