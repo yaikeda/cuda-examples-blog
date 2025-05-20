@@ -20,7 +20,7 @@ staticDir = "static"
     name = "linkedin"
     url = "https://www.linkedin.com/in/yasunari-ikeda/"
 
-  [[params.homeInfoParams]]
+  [params.homeInfoParams]
     Title = "PaperMod's Demo"
     Content = """👋 Welcome to demo page of Hugo's theme PaperMod!
 
