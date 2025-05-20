@@ -11,7 +11,7 @@ staticDir = "static"
 
 [params]
   author = "yaikeda"
-  defaultTheme = "light"
+  defaultTheme = "dark"
   ShowReadingTime = true
   ShowShareButtons = true
   ShareButtons = ["linkedin"]
