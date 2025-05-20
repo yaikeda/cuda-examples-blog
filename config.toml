@@ -1,0 +1,22 @@
+baseURL = "https://yaikeda.github.io/cuda-examples/"
+languageCode = "en-us"
+title = "CUDA Examples"
+theme = "hugo-PaperMod"
+
+[pagination]
+  pagerSize = 5
+
+[params]
+  author = "yaikeda"
+  defaultTheme = "light"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShareButtons = ["linkedin"]
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/yasunari-ikeda/"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
