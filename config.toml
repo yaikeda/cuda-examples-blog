@@ -1,7 +1,10 @@
-baseURL = "https://yaikeda.github.io/cuda-examples/"
+baseURL = "https://yaikeda.github.io/cuda-examples-blog/"
 languageCode = "en-us"
 title = "CUDA Examples"
 theme = "hugo-PaperMod"
+
+# 画像パスの設定
+staticDir = "static"
 
 [pagination]
   pagerSize = 5
