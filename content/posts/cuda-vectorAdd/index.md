@@ -46,7 +46,7 @@ __global__ void vectorAdd(const float* A, const float* B, float* C, int N) {
 ## Benchmark Results
 
 I tested both versions across varying data sizes.
-★ is faster 
+★ indicates the faster method 
 
 | N (Elements)     | CPU Time (ms) | GPU Time (ms) |
 |------------------|---------------|----------------|
@@ -65,7 +65,7 @@ I tested both versions across varying data sizes.
 
 ---
 
-## Learned
+## What I Learned
 
 - Always guard against out-of-bounds access in CUDA kernels using `if (i < N)`.
 - For real-time or low-latency systems, overlapping transfers (`cudaMemcpyAsync`) with kernel execution may be essential.
@@ -73,10 +73,10 @@ I tested both versions across varying data sizes.
     - *\_\_global\_\_* : Indicates the device code
     - *cudaMalloc* : GPU malloc()
     - *cudaMemcpy* : Copy data between host and device
-    - *cudaMemcpyAAAToBBB* : Defines the mode of transfer direction
-    - *cudaEventCreate* : Add mark to check some timing
-    - *cudaEventSynchronize* : Wait for the end of device computation
-    - *cudaEventElapsedTime* : Get elapsed time with GPU time
+    - *cudaMemcpyHostToDevice/DeviceToHost* : Defines the direction of memory transfer
+    - *cudaEventCreate* : Creates a timing event marker
+    - *cudaEventSynchronize* : Waits for the completion of device operations
+    - *cudaEventElapsedTime* : Gets elapsed time using GPU timing
     - *cudaFree* : GPU free()
 
 ---

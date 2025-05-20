@@ -99,7 +99,7 @@ void* use_cudaHostAlloc() {
 
 #### `nvidia-smi` Before and After
 
-The result of `nvidia-smi` looks similar with the result in 2. 
+The result of `nvidia-smi` is similar to the result in example 2. 
 
 ![Before](memoryAllocation_5.png)
 ![After](memoryAllocation_6.png)
