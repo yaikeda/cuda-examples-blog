@@ -89,9 +89,43 @@ args
 "-I", "${workspaceFolder}/samples/thirdparty/opencv4-11-0/build/include/opencv2"
 ```
 
-
 I implemented a simple class to load and store multiple images from a directory, so that each test case can access them easily from a shared cache.
 
+```
+class ImageStocker
+{
+    public:
+        ImageStocker(std::string dir, int count)
+        {
+            for (int i = 1; i <= count; i++)
+            {
+                std::string imgPath = dir + "/img_" + ZeroPadding(2, i) + ".png";
+                std::cout << "Image Path: " << imgPath << std::endl;
+                cv::Mat img = cv::imread(imgPath);
+                if (img.empty()) {
+                    printf("failed to load image\n");
+                    break;
+                }
+                m_images.push_back(img);
+            }
+        } 
+        int NumImages()
+        {
+            return m_images.size();
+        }
+        cv::Mat Get(int id)
+        {
+            if (NumImages() <= id)
+            {
+                std::cout << "m_images.size() <= id" << std::endl;
+                return cv::Mat();
+            }
+            return m_images[id];
+        }
+    private: 
+        std::vector<cv::Mat> m_images;
+};
+```
 ---
 
 ## Data Transfer to CUDA Device
