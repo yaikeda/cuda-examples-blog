@@ -37,3 +37,6 @@ staticDir = "static"
 [markup]
   [markup.highlight]
     noClasses = false
+
+  [markup.goldmark.renderer]
+    unsafe = true
