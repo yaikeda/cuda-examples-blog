@@ -28,13 +28,12 @@ The goal of this article is to demonstrate the complete workflow of loading imag
   <img src="img_02.png" style="width:30%; height:auto; margin-right:10px;" />
   <img src="img_03.png" style="width:30%; height:auto;" />
 </div>
-<br>
 <div style="display: flex; justify-content: center;">
   <img src="004_opencv_img_00.png" style="width:30%; height:auto; margin-right:10px;"/>
   <img src="004_opencv_img_01.png" style="width:30%; height:auto; margin-right:10px;"/>
   <img src="004_opencv_img_02.png" style="width:30%; height:auto;"/><br>
-  <i>Our goal: Convert color images to grayscale using a CUDA kernel.</i>
 </div>
+<i style="justify-content: center;">Our goal: Convert color images to grayscale using a CUDA kernel.</i>
 
 ---
 
