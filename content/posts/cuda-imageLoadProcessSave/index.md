@@ -23,7 +23,7 @@ summary: "This post explains how to use Nsight to profile CUDA performance, how 
 
 The goal of this article is to demonstrate the complete workflow of loading images using C++, transferring them to a CUDA device, processing them with a CUDA kernel, and writing the results back to the CPU for saving.
 
-<p align="center">
+<p style="align: center display: flex !important; gap: 10px;">
   <img src="img_01.png" width="30%" style="margin-right:10px;" />
   <img src="img_02.png" width="30%" style="margin-right:10px;" />
   <img src="img_03.png" width="30%" /><br>
