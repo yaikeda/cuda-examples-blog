@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://yaikeda.github.io/cuda-examples-blog/"
 languageCode = "en-us"
 title = "CUDA Examples"
 theme = "hugo-PaperMod"
@@ -17,7 +17,7 @@ staticDir = "static"
   ShareButtons = ["linkedin"]
   fontFamily = "Inter"
   googleFonts = "https://fonts.googleapis.com/css2?family=Inter&display=swap"
-
+  
   [params.assets]
     customCSS = ["css/custom.css"]
   
