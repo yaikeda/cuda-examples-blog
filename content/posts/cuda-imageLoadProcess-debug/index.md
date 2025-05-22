@@ -18,7 +18,7 @@ summary: "This post investigates and resolves a bug encountered while transferri
 
 ## Purpose
 Today’s post is modest but focused: debugging.  
-In [yesterday’s post](posts/cuda-imageLoadProcess/index.md), I created a workflow that loaded an arbitrary number of images, processed them with CUDA kernels, and transferred the results back to CPU memory. I also verified the GPU-side behavior using Nsight.  
+In yesterday’s post, I created a workflow that loaded an arbitrary number of images, processed them with CUDA kernels, and transferred the results back to CPU memory. I also verified the GPU-side behavior using Nsight.  
 However, the output looked strange—although the images appeared grayscale, there were clear artifacts.  
 This article walks through how I investigated and fixed the problem.
 
