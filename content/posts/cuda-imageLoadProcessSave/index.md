@@ -23,18 +23,18 @@ summary: "This post explains how to use Nsight to profile CUDA performance, how 
 
 The goal of this article is to demonstrate the complete workflow of loading images using C++, transferring them to a CUDA device, processing them with a CUDA kernel, and writing the results back to the CPU for saving.
 
-<div style="display: flex; justify-content: center;">
-  <img src="img_01.png" style="width:30%; height:auto; margin-right:10px;" />
-  <img src="img_02.png" style="width:30%; height:auto; margin-right:10px;" />
-  <img src="img_03.png" style="width:30%; height:auto;" />
+<div class="image-row">
+  <img src="img_01.png" />
+  <img src="img_02.png" />
+  <img src="img_03.png" />
 </div>
-<div style="display: flex; justify-content: center;">
-  <img src="004_opencv_img_00.png" style="width:30%; height:auto; margin-right:10px;"/>
-  <img src="004_opencv_img_01.png" style="width:30%; height:auto; margin-right:10px;"/>
-  <img src="004_opencv_img_02.png" style="width:30%; height:auto;"/><br>
+<div class="image-row">
+  <img src="004_opencv_img_00.png" />
+  <img src="004_opencv_img_01.png" />
+  <img src="004_opencv_img_02.png" />
 </div>
 <div style="text-align:center">
-  <i style="justify-content: center;">Our goal: Convert color images to grayscale using a CUDA kernel.</i>
+  <i>Our goal: Convert color images to grayscale using a CUDA kernel.</i>
 </div>
 
 ---
@@ -55,19 +55,24 @@ You can use any image for this experiment. But since we now have access to AI to
 
 DALL·E 3 by ChatGPT uses a Transformer-based system and excels at rendering user instructions faithfully on screen. I requested "ten square images with vivid backgrounds and numbers in the center," and the result was as follows:
 
-<p align="center">
-  <img src="img_01.png" width="15%" style="margin-right:10px;" />
-  <img src="img_02.png" width="15%" style="margin-right:10px;" />
-  <img src="img_03.png" width="15%" style="margin-right:10px;" />
-  <img src="img_04.png" width="15%" style="margin-right:10px;" />
-  <img src="img_05.png" width="15%"/><br>
-  <img src="img_06.png" width="15%" style="margin-right:10px;" />
-  <img src="img_07.png" width="15%" style="margin-right:10px;" />
-  <img src="img_08.png" width="15%" style="margin-right:10px;" />
-  <img src="img_09.png" width="15%" style="margin-right:10px;" />
-  <img src="img_10.png" width="15%"/><br>
+<div class="image-row">
+  <img src="img_01.png" />
+  <img src="img_02.png" />
+  <img src="img_03.png" />
+  <img src="img_04.png" />
+  <img src="img_05.png" />
+</div>
+<div class="image-row">
+  <img src="img_06.png" />
+  <img src="img_07.png" />
+  <img src="img_08.png" />
+  <img src="img_09.png" />
+  <img src="img_10.png" />
+</div>
+<div style="text-align: center">
   <i>Images generated using ChatGPT DALL·E 3.</i>
-</p>
+  <br><br>
+</div>
 
 As a long-time user of Stable Diffusion, I was impressed by how consistently the images rendered readable numbers with balanced compositions. Although this detail isn’t directly related to the experiment, it’s worth noting the recent advances in image generation quality.
 
@@ -201,21 +206,26 @@ __global__ void grayscaleKernel(cudaTextureObject_t texObj, unsigned char* out, 
 
 Unfortunately, the results were not as expected:
 
-<p align="center">
-  <img src="004_cuda-sequential_img_00.png" width="15%"/>
-  <img src="004_cuda-sequential_img_01.png" width="15%" style="margin-right:10px;" />
-  <img src="004_cuda-sequential_img_02.png" width="15%" style="margin-right:10px;" />
-  <img src="004_cuda-sequential_img_03.png" width="15%" style="margin-right:10px;" />
-  <img src="004_cuda-sequential_img_04.png" width="15%" style="margin-right:10px;" /><br>
-  <img src="004_cuda-sequential_img_05.png" width="15%"/>
-  <img src="004_cuda-sequential_img_06.png" width="15%" style="margin-right:10px;" />
-  <img src="004_cuda-sequential_img_07.png" width="15%" style="margin-right:10px;" />
-  <img src="004_cuda-sequential_img_08.png" width="15%" style="margin-right:10px;" />
-  <img src="004_cuda-sequential_img_09.png" width="15%" style="margin-right:10px;" /><br>
+<div class="image-row">
+  <img src="004_cuda-sequential_img_00.png" />
+  <img src="004_cuda-sequential_img_01.png" />
+  <img src="004_cuda-sequential_img_02.png" />
+  <img src="004_cuda-sequential_img_03.png" />
+  <img src="004_cuda-sequential_img_04.png" />
+</div>
+<div class="image-row">
+  <img src="004_cuda-sequential_img_05.png" />
+  <img src="004_cuda-sequential_img_06.png" />
+  <img src="004_cuda-sequential_img_07.png" />
+  <img src="004_cuda-sequential_img_08.png" />
+  <img src="004_cuda-sequential_img_09.png" />
+</div>
+<div class="text-align">
   <i>Output images processed by the CUDA kernel.</i>
-</p>
+  <br><br>
+</div>
 
-Something went wrong 🤔
+Something went wrong...🤔
 
 The structure of the images seems preserved, but some colors are difficult to distinguish. This might be caused by an error in channel mapping (BGR/RGB) or memory layout mismatch. I’ll investigate further in a separate post.
 
@@ -232,6 +242,8 @@ We can zoom in and identify where HtoD (Host to Device), DtoH (Device to Host), 
 ![nsight result 2](nsight_result2.png)
 
 CUDA malloc and kernel calls are executed sequentially for each image. In the next post, I will explore how the behavior changes when we pipeline the tasks using multiple streams.
+
+---
 
 ## Key Learnings
 - How to install and launch Nsight

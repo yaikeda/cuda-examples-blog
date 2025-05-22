@@ -1,0 +1,11 @@
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+.image-row img {
+    width: 90%;
+    height: auto;
+    justify-self: center;
+    border-radius: 8px;
+}
