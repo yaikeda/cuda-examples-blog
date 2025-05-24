@@ -17,7 +17,8 @@ staticDir = "static"
   ShareButtons = ["linkedin"]
   fontFamily = "Inter"
   googleFonts = "https://fonts.googleapis.com/css2?family=Inter&display=swap"
-    
+  googleAnalyticsID = "G-Z901327RB0"
+
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/yasunari-ikeda/"
