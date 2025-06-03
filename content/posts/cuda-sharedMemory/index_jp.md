@@ -34,8 +34,8 @@ CUDAには複数のメモリ階層が存在します。その中でも、**Share
 下図は各メモリの構成イメージです。
 
 <div class="image-row">
-    <img src="global_Memory.png" />
-    <img src="Shared_Memory.png" />
+    <img src="global_memory.png" />
+    <img src="shared_memory.png" />
 </div>
 
 ## 一般的な用途
