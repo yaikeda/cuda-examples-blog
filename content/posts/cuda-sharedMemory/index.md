@@ -34,8 +34,8 @@ CUDA provides multiple memory hierarchies. Among them, **shared memory** is a fa
 Here’s a visual illustration of each memory type:
 
 <div class="image-row">
-    <img src="global_Memory.png" />
-    <img src="Shared_Memory.png" />
+    <img src="global_memory.png" />
+    <img src="shared_memory.png" />
 </div>
 
 ## Typical Use Cases
