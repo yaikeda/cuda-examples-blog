@@ -78,7 +78,7 @@ This experiment compares execution time between using shared memory and using on
 ## The Program
 
 The code used in this experiment is available here:
-[GitHub](https://github.com/yaikeda/cuda-examples/blob/main/samples/007_SharedMemory/SharedMemory.cu)
+[GitHub](https://github.com/yaikeda/cuda-examples/blob/main/samples/007_sharedMemory/sharedMemory.cu)
 
 Implemented in C++ and CUDA C++, the program does the following:
 - Generates pseudo-random image data (float arrays)
