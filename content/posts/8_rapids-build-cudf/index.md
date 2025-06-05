@@ -1,5 +1,5 @@
 ---
-title: "How to Build libcudf from Source?"
+title: "Failure Log: How to Build libcudf from Source? "
 date: 2025-06-04
 summary: "This article introduces how to build libcudf, the backend of the RAPIDS library cuDF, from source."
 tags: ["CUDA", "GPGPU", "RAPIDS", "libcudf", "CUDF", "AWS", "WSL2", "Ubuntu"]
