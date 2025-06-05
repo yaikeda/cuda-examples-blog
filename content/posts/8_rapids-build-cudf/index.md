@@ -83,11 +83,11 @@ In all the following experiments, the build **FAILED** to proceed:
 
 | Environment | CPU | GPU | OS | CUDA | -jN | Result |
 |---|---|---|---|---|---|---|
-| Local PC | Ryzen 3700X | NVIDIA RTX 3060 | WSL2 Ubuntu 24.04 | 12.9 | Full | stopped at cicc command for building type_dispatcher.cu.o |
-| Local PC | Intel i7-8700 | NVIDIA RTX 4070Ti | WSL2 Ubuntu 24.04 | 12.9 | Full | stopped at cicc command for building type_dispatcher.cu.o |
-| Local PC | Intel i7-14700F | NVIDIA RTX 4080 | WSL2 Ubuntu 24.04 | 12.9 | 1 | stopped at cicc command for max.cu.o |
-| Local PC | Intel i7-14700F | NVIDIA RTX 4080 | WSL2 Ubuntu 24.04 | 12.9 | Full | stopped at cicc command for building type_dispatcher.cu.o |
-| AWS g5.2xlarge | 4C8T | A10G | Ubuntu 24.04 | 12.9 | Full | stopped at cicc command for sum.cu.o |
+| Local PC | Ryzen 3700X | NVIDIA RTX 3060 | WSL2 Ubuntu 24.04 | 12.0 | Full | stopped at cicc command for building type_dispatcher.cu.o |
+| Local PC | Intel i7-8700 | NVIDIA RTX 4070Ti | WSL2 Ubuntu 24.04 | 12.0 | Full | stopped at cicc command for building type_dispatcher.cu.o |
+| Local PC | Intel i7-14700F | NVIDIA RTX 4080 | WSL2 Ubuntu 24.04 | 12.0 | 1 | stopped at cicc command for max.cu.o |
+| Local PC | Intel i7-14700F | NVIDIA RTX 4080 | WSL2 Ubuntu 24.04 | 12.0 | Full | stopped at cicc command for building type_dispatcher.cu.o |
+| AWS g5.2xlarge | 4C8T | A10G | Ubuntu 24.04 | 12.0 | Full | stopped at cicc command for sum.cu.o |
 
 ## Suspected Causes of Failure
 The main differences appear to be the Ubuntu version and the CUDA version.
