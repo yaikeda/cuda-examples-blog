@@ -89,6 +89,8 @@ In all the following experiments, the build **FAILED** to proceed:
 | Local PC | Intel i7-14700F | NVIDIA RTX 4080 | WSL2 Ubuntu 24.04 | 12.0 | Full | stopped at cicc command for building type_dispatcher.cu.o |
 | AWS g5.2xlarge | 4C8T | A10G | Ubuntu 24.04 | 12.0 | Full | stopped at cicc command for sum.cu.o |
 
+CUDA 12.0: Used nvidia-cuda-toolkit in Ubuntu repository for CUDA Toolkit. 
+
 ## Suspected Causes of Failure
 The main differences appear to be the Ubuntu version and the CUDA version.
 Since the major version of CUDA (12) is the same, I suspect instability within that version range.
