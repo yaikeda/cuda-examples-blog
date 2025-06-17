@@ -1,6 +1,6 @@
 ---
 title: "Follow-Up: Building libcudf on WSL2"
-date: 2025-06-07
+date: 2025-06-17
 summary: "Continuing from the previous post, this article explains how I replicated successful libcudf builds by cloning WSL2 environments and installing the correct CUDA Toolkit."
 tags: ["CUDA", "libcudf", "WSL2", "Ubuntu", "CUDA Toolkit", "NVIDIA"]
 ---
@@ -34,8 +34,6 @@ wsl --import <Distro> <InstallLocation> <FileName>
 ```
 
 You can choose any location, including another drive, when importing. Using this feature I compared several Ubuntu environments.
-
-![WSL2 duplication diagram](wsl2_clone.png)
 
 ## Conclusion
 The issue turned out to be installing `cuda-toolkit` from Ubuntu's official repository, which only provides the outdated version 12.0. By switching to NVIDIA's repository, I could install newer versions such as 12.6 or 12.8. At the time of writing, 12.6 is considered stable, so it is a safe choice unless you need a different version.
